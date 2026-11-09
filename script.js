@@ -232,57 +232,51 @@ hero.addEventListener("mouseleave", () => {
 
 
 /* =====================================================
-   PROJECT CARD TILT
+   PROJECT CARD TILT — DESKTOP ONLY
 ===================================================== */
 
-const projectCards =
-    document.querySelectorAll(".project-card");
+const projectCards = document.querySelectorAll(".project-card");
 
+const canHover = window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+);
 
-projectCards.forEach(card => {
+if (canHover.matches) {
 
-    card.addEventListener("mousemove", (event) => {
+    projectCards.forEach(card => {
 
-        const rect = card.getBoundingClientRect();
+        card.addEventListener("mousemove", (event) => {
 
-        const x =
-            event.clientX - rect.left;
+            const rect = card.getBoundingClientRect();
 
-        const y =
-            event.clientY - rect.top;
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
 
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
 
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 40;
+            const rotateY = (centerX - x) / 40;
 
+            card.style.transform =
+                `perspective(1000px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateX(5px)`;
 
-        const rotateX =
-            (y - centerY) / 30;
+        });
 
-        const rotateY =
-            (centerX - x) / 30;
+        card.addEventListener("mouseleave", () => {
 
+            card.style.transform = "";
 
-        card.style.transform =
-            `perspective(1000px)
-             rotateX(${rotateX}deg)
-             rotateY(${rotateY}deg)
-             translateX(10px)`;
-
-    });
-
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform =
-            "perspective(1000px) rotateX(0) rotateY(0) translateX(0)";
+        });
 
     });
 
-});
+}
 
-
-/* =====================================================
+ =====================================================
    PAGE LOAD ANIMATION
 ===================================================== */
 
