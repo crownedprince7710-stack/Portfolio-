@@ -1,105 +1,78 @@
 
-// =================================
-// PRINCE PORTFOLIO INTERACTIONS
-// =================================
+// ====================================
+// PRINCE PORTFOLIO — INTERACTIONS
+// ====================================
 
+const menuButton = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
 
 // MOBILE NAVIGATION
 
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector(".navigation");
-
-
 function closeMenu() {
-  if (!menuButton || !navigation) return;
+  if (!menuButton || !nav) return;
 
   menuButton.setAttribute("aria-expanded", "false");
-  menuButton.setAttribute("aria-label", "Open menu");
-
-  navigation.classList.remove("open");
+  nav.classList.remove("open");
 }
 
-
-if (menuButton && navigation) {
+if (menuButton && nav) {
 
   menuButton.addEventListener("click", () => {
 
-    const isOpen =
+    const open =
       menuButton.getAttribute("aria-expanded") === "true";
 
-    menuButton.setAttribute(
-      "aria-expanded",
-      String(!isOpen)
-    );
-
-    menuButton.setAttribute(
-      "aria-label",
-      isOpen ? "Open menu" : "Close menu"
-    );
-
-    navigation.classList.toggle("open", !isOpen);
+    menuButton.setAttribute("aria-expanded", String(!open));
+    nav.classList.toggle("open", !open);
 
   });
 
-
-  // Close menu after selecting a section.
-
-  navigation.querySelectorAll("a").forEach(link => {
-
+  nav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", closeMenu);
-
   });
-
-
-  // Close menu using Escape.
 
   document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-
+    if (event.key === "Escape") closeMenu();
   });
 
-
-  // Close menu when clicking outside it.
-
   document.addEventListener("click", event => {
-
-    const clickedInside =
-      navigation.contains(event.target) ||
-      menuButton.contains(event.target);
-
-    if (!clickedInside) {
+    if (
+      !nav.contains(event.target) &&
+      !menuButton.contains(event.target)
+    ) {
       closeMenu();
     }
-
   });
 
 }
 
+// CLOSE MENU ON DESKTOP RESIZE
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 560) {
+    closeMenu();
+  }
+});
 
 
-// =================================
-// SCROLL REVEAL ANIMATIONS
-// =================================
+// SCROLL REVEAL
 
-const revealElements =
-  document.querySelectorAll(".reveal");
-
+const revealTargets = document.querySelectorAll(
+  ".project-card, .interest-grid article, .journey-list article, .about-main"
+);
 
 if ("IntersectionObserver" in window) {
 
-  const observer = new IntersectionObserver(
-    (entries, observerInstance) => {
+  const revealObserver = new IntersectionObserver(
+    entries => {
 
       entries.forEach(entry => {
 
         if (entry.isIntersecting) {
 
-          entry.target.classList.add("visible");
+          entry.target.classList.add("revealed");
 
-          observerInstance.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
 
         }
 
@@ -107,52 +80,34 @@ if ("IntersectionObserver" in window) {
 
     },
     {
-      threshold: 0.12,
-      rootMargin: "0px 0px -35px 0px"
+      threshold: 0.12
     }
   );
 
-
-  revealElements.forEach(element => {
-    observer.observe(element);
+  revealTargets.forEach(element => {
+    element.classList.add("reveal-ready");
+    revealObserver.observe(element);
   });
 
 } else {
 
-  // Fallback for older browsers.
-
-  revealElements.forEach(element => {
-    element.classList.add("visible");
+  revealTargets.forEach(element => {
+    element.classList.add("revealed");
   });
 
 }
 
 
+// CURRENT YEAR
 
-// =================================
-// FOOTER YEAR
-// =================================
+const year = document.getElementById("year");
 
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-
-  yearElement.textContent =
-    new Date().getFullYear();
-
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
 
 
+// CLOSE MENU IF ORIENTATION CHANGES
 
-// =================================
-// CLOSE MENU WHEN SCREEN RESIZES
-// =================================
-
-window.addEventListener("resize", () => {
-
-  if (window.innerWidth > 600) {
-    closeMenu();
-  }
-
-});
+window.addEventListener("orientationchange", closeMenu);
 
