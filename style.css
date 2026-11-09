@@ -1110,3 +1110,13 @@ button {
     scroll-behavior: auto !important;
   }
 }
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-ready.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
