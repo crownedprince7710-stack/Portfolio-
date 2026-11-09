@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F1EADA">
-  <meta name="description" content="Prince — AI/ML student and creative developer.">
+  <meta name="description" content="Prince — AI/ML student, developer and creative builder.">
 
   <title>Prince — Creative Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -20,489 +19,436 @@
 
 <body>
 
-  <div class="grain"></div>
+<header class="header">
+  <a href="#home" class="logo">PRINCE<span>.</span></a>
 
-  <!-- NAVIGATION -->
-  <header class="header" id="top">
-    <a href="#top" class="logo">P<span>.</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation"
+    aria-expanded="false">
+    <span></span><span></span>
+  </button>
 
-    <button class="menu-toggle" aria-label="Open menu"
-      aria-expanded="false" aria-controls="navigation">
-      <span></span>
-      <span></span>
-    </button>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Projects</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact" class="nav-cta">Let's talk ↗</a>
+  </nav>
+</header>
 
-    <nav class="navigation" id="navigation">
-      <a href="#about">About</a>
-      <a href="#work">Projects</a>
-      <a href="#journey">Journey</a>
-      <a href="#contact" class="nav-contact">Let's talk ↗</a>
-    </nav>
-  </header>
+<main>
 
-  <main>
+  <!-- HERO -->
+  <section class="hero container" id="home">
 
-    <!-- HERO -->
-    <section class="hero container">
+    <div class="hero-copy">
 
-      <div class="hero-content">
-        <p class="eyebrow">
-          <span class="status-dot"></span>
-          B.TECH AI & ML STUDENT / BUILDER
-        </p>
-
-        <h1>
-          Curious mind.<br>
-          <em>Building</em> things<br>
-          that matter<span class="accent">.</span>
-        </h1>
-
-        <p class="hero-description">
-          I'm Prince — an aspiring AI/ML developer exploring
-          the space where thoughtful design, technology
-          and real-world ideas meet.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#work" class="button button-dark">
-            Explore my work <span>↗</span>
-          </a>
-
-          <a href="#contact" class="simple-link">
-            Get in touch ↗
-          </a>
-        </div>
-
-        <div class="hero-meta">
-          <span>BASED IN INDIA</span>
-          <span>OPEN TO LEARNING & COLLABORATION</span>
-        </div>
+      <div class="eyebrow">
+        <span class="availability"></span>
+        STUDENT · WEB DEVELOPER · PROGRAMMER
       </div>
 
-      <!-- DECORATIVE ART -->
-      <div class="hero-art">
-
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="art-sun"></div>
-
-        <div class="art-card">
-          <span class="art-label">
-            CREATIVE DEVELOPER · 001
-          </span>
-
-          <div class="monogram">P<span>.</span></div>
-
-          <span class="art-caption">
-            Ideas into<br>interfaces.
-          </span>
-        </div>
-
-        <span class="art-side">
-          DESIGN / CODE / EXPERIMENT
-        </span>
-
-        <span class="art-stamp">EST. 2026</span>
-      </div>
-
-      <a href="#about" class="scroll-cue">
-        <span></span> SCROLL TO EXPLORE
-      </a>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section class="about container section" id="about">
-
-      <div class="section-label">
-        <span>01</span> A LITTLE ABOUT ME
-      </div>
-
-      <div class="about-content reveal">
-
-        <h2 class="statement">
-          I like turning <em>curiosity</em>
-          into things people can actually use.
-        </h2>
-
-        <div class="about-bottom">
-
-          <p>
-            Currently studying Artificial Intelligence
-            & Machine Learning at CT Group of Institutions.
-
-            I enjoy building web experiences, experimenting
-            with computer vision and learning by making
-            real projects — one iteration at a time.
-          </p>
-
-          <a href="#work" class="round-link">↓</a>
-
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section class="work container section" id="work">
-
-      <div class="section-heading">
-
-        <div>
-          <div class="section-label">
-            <span>02</span> THINGS I'VE BUILT
-          </div>
-
-          <h2>Selected <em>work.</em></h2>
-        </div>
-
-        <p>
-          A couple of experiments<br>
-          made real through code.
-        </p>
-
-      </div>
-
-
-      <div class="projects-grid">
-
-        <!-- PROJECT 1 -->
-        <article class="project reveal">
-
-          <a class="project-image pushup-image"
-             href="https://crownedprince7710-stack.github.io/pushup-challenger/"
-             target="_blank" rel="noopener noreferrer">
-
-            <div class="image-top">
-              <span>01 / INTERACTIVE WEB APP</span>
-              <span>2026</span>
-            </div>
-
-            <div class="pushup-ui">
-
-              <div class="ui-header">
-                <span class="ui-dot"></span>
-                PUSHUP CHALLENGER
-                <span class="live">LIVE</span>
-              </div>
-
-              <div class="ui-number">
-                24<span> reps</span>
-              </div>
-
-              <div class="ui-progress">
-                <span></span>
-              </div>
-
-              <div class="ui-footer">
-                <span>FORM. FOCUS. FINISH.</span>
-                <span>↗</span>
-              </div>
-
-            </div>
-
-            <span class="open-project">OPEN PROJECT ↗</span>
-
-          </a>
-
-          <div class="project-details">
-
-            <div>
-              <h3>Pushup Challenger</h3>
-
-              <p>
-                A camera-based push-up challenge experience
-                with rep counting, challenges and
-                multiplayer features.
-              </p>
-            </div>
-
-            <span class="project-number">01</span>
-
-          </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>MediaPipe</span>
-            <span>Firebase</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://crownedprince7710-stack.github.io/pushup-challenger/"
-               target="_blank" rel="noopener noreferrer">
-              Live preview ↗
-            </a>
-
-            <a href="https://github.com/crownedprince7710-stack/pushup-challenger"
-               target="_blank" rel="noopener noreferrer">
-              Source code ↗
-            </a>
-          </div>
-
-        </article>
-
-
-        <!-- PROJECT 2 -->
-        <article class="project reveal">
-
-          <a class="project-image portfolio-image"
-             href="https://crownedprince7710-stack.github.io/Portfolio-/"
-             target="_blank" rel="noopener noreferrer">
-
-            <div class="image-top">
-              <span>02 / PERSONAL WEBSITE</span>
-              <span>2026</span>
-            </div>
-
-            <div class="portfolio-mock">
-
-              <div class="mock-nav">
-                <b>P.</b>
-                <span>ABOUT &nbsp; WORK &nbsp; CONTACT</span>
-              </div>
-
-              <div class="mock-title">
-                A digital<br><em>space.</em>
-              </div>
-
-              <div class="mock-shape"></div>
-
-              <div class="mock-footer">
-                DESIGNED & BUILT BY PRINCE
-              </div>
-
-            </div>
-
-            <span class="open-project">OPEN PROJECT ↗</span>
-
-          </a>
-
-          <div class="project-details">
-
-            <div>
-              <h3>Portfolio Website</h3>
-
-              <p>
-                My personal corner of the internet
-                to share my journey, experiments
-                and projects.
-              </p>
-            </div>
-
-            <span class="project-number">02</span>
-
-          </div>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://crownedprince7710-stack.github.io/Portfolio-/"
-               target="_blank" rel="noopener noreferrer">
-              Live preview ↗
-            </a>
-
-            <a href="https://github.com/crownedprince7710-stack/Portfolio-"
-               target="_blank" rel="noopener noreferrer">
-              Source code ↗
-            </a>
-          </div>
-
-        </article>
-
-      </div>
-
-      <p class="project-note">
-        MORE IDEAS IN PROGRESS — ALWAYS BUILDING.
+      <h1>
+        Hi, I'm <span>PRINCE.</span>
+        <br>
+        <em>Building ideas</em><br>
+        into reality.
+      </h1>
+
+      <p class="hero-text">
+        I build clean, thoughtful and interactive digital
+        experiences while exploring the world of
+        Artificial Intelligence and technology.
       </p>
 
-    </section>
+      <div class="hero-actions">
+        <a href="#work" class="primary-btn">
+          Explore my work <span>↗</span>
+        </a>
+        <a href="#contact" class="text-btn">
+          Let's connect ↗
+        </a>
+      </div>
 
+      <div class="hero-bottom">
+        <span>BASED IN INDIA</span>
+        <span>ALWAYS LEARNING. ALWAYS BUILDING.</span>
+      </div>
 
-    <!-- INTERESTS -->
-    <section class="interests">
+    </div>
 
-      <div class="container">
+    <div class="hero-visual">
 
-        <div class="section-label light-label">
-          <span>03</span> WHAT I'M INTO
+      <div class="visual-label">A CREATIVE MIND / 2026</div>
+
+      <div class="editorial-art">
+
+        <div class="art-circle"></div>
+
+        <div class="art-object">
+          <div class="object-inner"></div>
         </div>
 
-        <div class="interest-grid">
+        <div class="art-small-circle"></div>
 
-          <article class="interest reveal">
-            <span>01</span>
-            <h3>Artificial<br><em>Intelligence</em></h3>
-            <p>
-              Understanding how intelligent systems
-              learn, reason and help people.
-            </p>
-          </article>
+        <span class="art-letter">P.</span>
 
-          <article class="interest reveal">
-            <span>02</span>
-            <h3>Creative<br><em>Development</em></h3>
-            <p>
-              Building clean, responsive interfaces
-              with details that feel right.
-            </p>
-          </article>
-
-          <article class="interest reveal">
-            <span>03</span>
-            <h3>Learning by<br><em>Building</em></h3>
-            <p>
-              Trying ideas, solving problems
-              and improving the result.
-            </p>
-          </article>
-
+        <div class="art-caption">
+          <span>DESIGN</span>
+          <span>TECHNOLOGY</span>
+          <span>CREATIVITY</span>
         </div>
 
       </div>
 
-    </section>
+      <div class="visual-footer">
+        <span>FIG. 001</span>
+        <span>AN ONGOING JOURNEY</span>
+      </div>
+
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      SCROLL TO DISCOVER <span>↓</span>
+    </a>
+
+  </section>
 
 
-    <!-- JOURNEY -->
-    <section class="journey container section" id="journey">
+  <!-- ABOUT -->
+  <section class="about section container" id="about">
 
-      <div class="section-heading">
+    <div class="section-label">
+      <span>01</span> / A LITTLE ABOUT ME
+    </div>
 
-        <div>
-          <div class="section-label">
-            <span>04</span> THE JOURNEY SO FAR
-          </div>
+    <div class="about-main">
 
-          <h2>Learning in <em>progress.</em></h2>
-        </div>
+      <h2>
+        Creating with curiosity.<br>
+        Growing with <em>purpose.</em>
+      </h2>
+
+      <div class="about-details">
 
         <p>
-          Not a finished story.<br>
-          That's the exciting part.
+          I'm Prince, an Artificial Intelligence and
+          Machine Learning student at CT Group of
+          Institutions.
+
+          I enjoy exploring technology, building
+          digital products and turning ideas into
+          practical experiences.
+        </p>
+
+        <p>
+          From computer vision experiments to
+          interactive websites, I'm learning by
+          building things that solve real problems.
         </p>
 
       </div>
 
+    </div>
 
-      <div class="timeline">
+  </section>
 
-        <article class="timeline-item reveal">
 
-          <span class="timeline-date">2026 — NOW</span>
+  <!-- PROJECTS -->
+  <section class="projects section container" id="work">
 
-          <div>
-            <h3>
-              B.Tech — Artificial Intelligence
-              & Machine Learning
-            </h3>
+    <div class="section-heading">
 
-            <p>
-              CT Group of Institutions.
-              Building foundations in programming,
-              mathematics and AI/ML.
-            </p>
+      <div>
+        <div class="section-label">
+          <span>02</span> / SELECTED WORK
+        </div>
+
+        <h2>Things I've <em>created.</em></h2>
+      </div>
+
+      <p>
+        Experiments, ideas and projects<br>
+        brought to life through code.
+      </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+      <!-- PUSHUP CHALLENGER -->
+
+      <article class="project-card">
+
+        <a class="project-visual pushup"
+           href="https://crownedprince7710-stack.github.io/pushup-challenger/"
+           target="_blank" rel="noopener noreferrer">
+
+          <div class="project-top">
+            <span>01 / WEB APPLICATION</span>
+            <span>2026</span>
           </div>
 
-          <span class="timeline-dot">●</span>
+          <div class="pushup-preview">
 
-        </article>
+            <div class="preview-nav">
+              <span>PC.</span>
+              <span>CHALLENGE YOUR LIMITS</span>
+            </div>
 
+            <div class="preview-heading">
+              PUSHUP<br><em>CHALLENGER.</em>
+            </div>
 
-        <article class="timeline-item reveal">
+            <div class="preview-stats">
+              <div>
+                <strong>24</strong>
+                <span>REPS COMPLETED</span>
+              </div>
 
-          <span class="timeline-date">ONGOING</span>
+              <div class="preview-line"></div>
 
-          <div>
-            <h3>Independent projects & experimentation</h3>
+              <span>KEEP GOING ↗</span>
+            </div>
 
-            <p>
-              Learning front-end development,
-              computer vision, Firebase and
-              practical product building.
-            </p>
           </div>
 
-          <span class="timeline-dot">○</span>
+          <span class="project-open">VIEW PROJECT ↗</span>
 
+        </a>
+
+        <div class="project-info">
+          <div>
+            <h3>Pushup Challenger</h3>
+            <p>
+              An interactive fitness application featuring
+              AI-powered push-up detection, rep counting
+              and multiplayer challenges.
+            </p>
+          </div>
+          <span class="project-index">01</span>
+        </div>
+
+        <div class="tags">
+          <span>JavaScript</span>
+          <span>MediaPipe</span>
+          <span>Firebase</span>
+          <span>CSS</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="https://crownedprince7710-stack.github.io/pushup-challenger/"
+             target="_blank" rel="noopener noreferrer">Live preview ↗</a>
+          <a href="https://github.com/crownedprince7710-stack/pushup-challenger"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+
+      </article>
+
+
+      <!-- PORTFOLIO -->
+
+      <article class="project-card">
+
+        <a class="project-visual portfolio"
+           href="https://crownedprince7710-stack.github.io/Portfolio-/"
+           target="_blank" rel="noopener noreferrer">
+
+          <div class="project-top">
+            <span>02 / PERSONAL WEBSITE</span>
+            <span>2026</span>
+          </div>
+
+          <div class="portfolio-preview">
+
+            <div class="portfolio-nav">
+              <b>P.</b>
+              <span>ABOUT &nbsp; WORK &nbsp; CONTACT</span>
+            </div>
+
+            <div class="portfolio-heading">
+              A digital<br>
+              <em>expression.</em>
+            </div>
+
+            <div class="portfolio-shape"></div>
+
+            <span class="portfolio-bottom">
+              MADE WITH CURIOSITY.
+            </span>
+
+          </div>
+
+          <span class="project-open">VIEW PROJECT ↗</span>
+
+        </a>
+
+        <div class="project-info">
+          <div>
+            <h3>Personal Portfolio</h3>
+            <p>
+              A personal digital space to showcase my
+              projects, development journey and
+              creative interests.
+            </p>
+          </div>
+          <span class="project-index">02</span>
+        </div>
+
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>UI Design</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="https://crownedprince7710-stack.github.io/Portfolio-/"
+             target="_blank" rel="noopener noreferrer">Live preview ↗</a>
+          <a href="https://github.com/crownedprince7710-stack/Portfolio-"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="more-work">
+      <span>MORE IDEAS ARE IN THE MAKING.</span>
+      <span>THIS IS JUST THE BEGINNING ↗</span>
+    </div>
+
+  </section>
+
+
+  <!-- INTERESTS -->
+  <section class="interests section">
+
+    <div class="container">
+
+      <div class="section-label light">
+        <span>03</span> / WHAT I LOVE EXPLORING
+      </div>
+
+      <h2 class="interest-heading">
+        Interests that<br>
+        <em>shape my thinking.</em>
+      </h2>
+
+      <div class="interest-grid">
+
+        <article>
+          <span>01</span>
+          <h3>Artificial<br><em>Intelligence</em></h3>
+          <p>Exploring machine learning, computer vision and intelligent systems.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Creative<br><em>Development</em></h3>
+          <p>Creating thoughtful interfaces and meaningful digital experiences.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Continuous<br><em>Learning</em></h3>
+          <p>Experimenting, solving problems and getting better through building.</p>
         </article>
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
+  <!-- JOURNEY -->
+  <section class="journey section container" id="journey">
 
-      <div class="container">
+    <div class="section-label">
+      <span>04</span> / MY JOURNEY
+    </div>
 
-        <div class="section-label light-label">
-          <span>05</span> HAVE SOMETHING IN MIND?
+    <h2>Still becoming <em>better.</em></h2>
+
+    <div class="journey-list">
+
+      <article>
+        <span>2026 — PRESENT</span>
+        <div>
+          <h3>B.Tech in AI & Machine Learning</h3>
+          <p>CT Group of Institutions. Learning the foundations of AI, programming and technology.</p>
         </div>
+        <span class="journey-marker">●</span>
+      </article>
 
-        <p class="contact-kicker">
-          GOOD IDEAS START WITH A
-        </p>
-
-        <h2>Simple <em>hello.</em></h2>
-
-        <p class="contact-description">
-          Open to connecting with fellow builders,
-          learning opportunities, collaborations
-          and internships.
-        </p>
-
-        <div class="contact-actions">
-
-          <a class="button button-light"
-             href="https://www.linkedin.com/in/prince-926074409"
-             target="_blank" rel="noopener noreferrer">
-            Connect on LinkedIn ↗
-          </a>
-
-          <a class="social-link"
-             href="https://github.com/crownedprince7710-stack"
-             target="_blank" rel="noopener noreferrer">
-            GitHub ↗
-          </a>
-
-          <a class="social-link"
-             href="https://www.instagram.com/prince.build_s/"
-             target="_blank" rel="noopener noreferrer">
-            Instagram ↗
-          </a>
-
+      <article>
+        <span>ONGOING</span>
+        <div>
+          <h3>Independent Projects</h3>
+          <p>Building web applications, exploring computer vision and experimenting with ideas.</p>
         </div>
+        <span class="journey-marker">○</span>
+      </article>
 
-        <div class="contact-bottom">
-          <span>LET'S MAKE SOMETHING MEANINGFUL.</span>
-          <a href="#top">BACK TO TOP ↑</a>
-        </div>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+
+    <div class="container">
+
+      <div class="section-label light">
+        <span>05</span> / LET'S CONNECT
+      </div>
+
+      <p class="contact-overline">EVERYTHING STARTS WITH A CONVERSATION.</p>
+
+      <h2>Have an idea?<br><em>Say hello.</em></h2>
+
+      <p class="contact-description">
+        Open to connecting with fellow developers,
+        creative minds, internship opportunities
+        and exciting collaborations.
+      </p>
+
+      <div class="contact-links">
+
+        <a class="contact-button"
+           href="https://www.linkedin.com/in/prince-926074409"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn ↗
+        </a>
+
+        <a href="https://github.com/crownedprince7710-stack"
+           target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+        <a href="https://www.instagram.com/prince.build_s/"
+           target="_blank" rel="noopener noreferrer">Instagram ↗</a>
 
       </div>
 
-    </section>
+      <div class="contact-footer">
+        <span>GOOD THINGS TAKE CURIOSITY.</span>
+        <a href="#home">BACK TO TOP ↑</a>
+      </div>
 
-  </main>
+    </div>
+
+  </section>
+
+</main>
 
 
-  <footer class="footer container">
-
-    <a href="#top" class="logo">P<span>.</span></a>
-
-    <span>DESIGNED & BUILT WITH CURIOSITY.</span>
-
-    <span>© <span id="year"></span> PRINCE</span>
-
-  </footer>
+<footer class="footer container">
+  <a href="#home" class="logo">PRINCE<span>.</span></a>
+  <span>DESIGNED WITH INTENTION. BUILT WITH CURIOSITY.</span>
+  <span>© <span id="year"></span></span>
+</footer>
 
 </body>
 </html>
